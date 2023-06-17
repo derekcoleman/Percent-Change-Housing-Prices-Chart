@@ -16,10 +16,10 @@ import pandas as pd
 import plotly.express as px
 
 
-api_key = os.environ['parcl_labs_api_key']
+api_key = "a3VyYnk6MGFVNGwxbEs4ak0k"
 
 headers = {
-    "Authorization": 'a3VyYnk6MGFVNGwxbEs4ak0k'
+    "Authorization": api_key
 }
 
 
