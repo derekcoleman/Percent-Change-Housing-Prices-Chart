@@ -19,7 +19,7 @@ import plotly.express as px
 api_key = os.environ['parcl_labs_api_key']
 
 headers = {
-    "Authorization": a3VyYnk6MGFVNGwxbEs4ak0k
+    "Authorization": 'a3VyYnk6MGFVNGwxbEs4ak0k'
 }
 
 
