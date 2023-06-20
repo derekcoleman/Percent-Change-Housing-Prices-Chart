@@ -1,6 +1,6 @@
 """
 To get started with the Parcl Labs API, please follow the quick start
-guide to get your API key: 
+guide to get your API key:
 
 https://docs.parcllabs.com/docs/quickstart
 """
@@ -81,7 +81,7 @@ params = {
 
 # grab the price feed and calculate percent change since t0
 for parcl_id in data.keys():
-    price_feed_endpoint = f"https://api.realestate.parcllabs.com/v1/price_feed/{parcl_id}/history"    
+    price_feed_endpoint = f"https://api.realestate.parcllabs.com/v1/price_feed/{parcl_id}/history"
     response = requests.get(price_feed_endpoint, params=params, headers=headers).json()
     price_feed = pd.DataFrame(response['price_feed'])
     price_feed['pct_change_since_start'] = (1-price_feed.iloc[0].price / price_feed.price)
@@ -96,10 +96,10 @@ out['date'] = pd.to_datetime(out['date'])
 # plot
 out = out.rename(columns={'name': "Market"})
 fig1 = px.line(
-    out, x='date', 
-    y='pct_change_since_start', 
-    color='Market', 
-    render_mode='webgl', 
+    out, x='date',
+    y='pct_change_since_start',
+    color='Market',
+    render_mode='webgl',
     labels={
     'pct_change_since_start': "Percent Change (Price per Square Foot)",
     },
