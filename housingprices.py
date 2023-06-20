@@ -120,3 +120,15 @@ fig1.update_xaxes(tickangle=45)
 fig1.update_yaxes(tickformat='.0%')
 
 st.plotly_chart(fig1)
+
+fig1.write_html("index.html")
+
+from flask import Flask, send_file
+app = Flask(__name__)
+
+@app.route("/")
+def plot():
+    return send_file("index.html")
+
+if __name__ == "__main__":
+    app.run()
