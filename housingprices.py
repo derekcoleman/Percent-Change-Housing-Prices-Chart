@@ -5,8 +5,7 @@ guide to get your API key:
 https://docs.parcllabs.com/docs/quickstart
 """
 
-
-import streamlit as st
+from flask import Flask, send_file
 import os
 import requests
 from datetime import datetime, timedelta
