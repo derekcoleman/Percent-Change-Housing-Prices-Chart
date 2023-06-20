@@ -6,7 +6,7 @@ https://docs.parcllabs.com/docs/quickstart
 """
 
 
-
+import streamlit as st
 import os
 import requests
 from datetime import datetime, timedelta
@@ -118,3 +118,5 @@ fig1.update_layout(
 fig1.update_xaxes(tickangle=45)
 
 fig1.update_yaxes(tickformat='.0%')
+
+st.plotly_chart(fig1)
